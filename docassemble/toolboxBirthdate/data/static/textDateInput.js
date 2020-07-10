@@ -1,6 +1,6 @@
 //this is a revision of Jonathan Pyle's datereplace.js
 $(document).on('daPageLoad', function(){
-    $('input[type="textdate"]').each(function(){
+  $('input[type="textdate"]').each(function(){
 	var dateElement = this;
 	$(dateElement).hide();
 	$(dateElement).attr('type', 'hidden');
@@ -60,24 +60,8 @@ $(document).on('daPageLoad', function(){
 	}
 
 	function updateDate(){
-		$(dateElement).val($(monthElement).val() + '/' + $(dayElement).val() + '/' + $(yearElement).val());
-    // Trigger an error message right away if needed by changing
-    // jQuery's validator settings temporarily
-    console.log( 1 );
-    if ( daValidator ) {
-      console.log( 2 );
-      // Starts as ":hidden"
-      var previousIgnore = daValidator.settings.ignore;
-      console.log( 3 );
-      daValidator.settings.ignore = ""
-      console.log( 4 );
-      daValidator.form();
-      console.log( 5 );
-      daValidator.settings.ignore = previousIgnore;
-      console.log( 6 );
-    }
-    console.log( 7 );
-	}
+		$(dateElement).val($(monthElement).val() + '/' + $(dayElement).val() + '/' + $(yearElement).val());	
+	}	
 	
 	$(dateElement).before(parentElement);	
 	$(monthParent).append(monthLabel);
